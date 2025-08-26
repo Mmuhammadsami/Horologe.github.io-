@@ -1,0 +1,147 @@
+ 
+ <style >
+ body {
+      margin: 0;
+      font-family: 'Orbitron', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      background-color: #fffffffd;
+      
+    }
+
+    header {
+  background-color: rgb(41, 43, 42); /* your color */
+  background-image: url("images/rolex datejust.jpg");
+  background-repeat: no-repeat;
+   /* right side, vertically centered */
+  background-size:800px 300px ; /* control image size */
+ background-position-x: right;
+  color: rgb(235, 235, 235); 
+  padding: 10px;
+  text-align: left; /* keep text aligned left */
+  p{
+    font-size: 30px;
+    padding-left: 80px;
+
+  }
+}
+.header-text {
+  text-align: left;
+  margin-top: 30px;
+  padding-left: 10px;
+  height: 20px;
+}
+.header-image {
+  text-align:left;
+  margin-top: 20px;
+  padding-right: 50px;
+  height: 100px;
+}
+
+
+nav a {
+  text-decoration: none;   /* remove underline */
+  color: rgb(0, 0, 0);            /* normal color */
+  background-color: rgb(48, 46, 46); /* background like a button */
+  padding: 8px 15px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* when user hovers */
+nav a:hover {
+  background-color: #302f2f;
+  color: #f0c040;  /* gold hover color */
+}
+
+/* when user clicks (active state) */
+nav a:active {
+  background-color: #555;
+}
+
+/* prevent purple visited links */
+nav a:visited {
+  color: white;
+}
+
+
+    
+
+    
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+     gap: 50px;
+    }
+    .product-card {
+      background-color: #ecece6;
+      width: 250px;
+      padding: 50px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.5s ease;
+    }
+  
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+    .product-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+  
+    .btn {
+      margin-top: 10px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      background-color: #313332;
+      cursor: pointer;
+    }
+   select {
+  padding: 8px;
+  margin-top: 5px;
+  width: 80px;
+}
+input {
+  padding: 8px;
+  margin-top: 5px;
+  width: 100%;
+}
+
+    .cart-summary {
+      max-width: 500px;
+      margin: 30px auto;
+      background: #807c7c;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: none;
+    }
+    .popup {
+      display: none;
+      background-color: #2f312d;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      margin: 20px auto;
+      width: 300px;
+      border-radius: 5px;
+    }
+    footer {
+      background-color: #000000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+
+
+
+ 
+  
+  
