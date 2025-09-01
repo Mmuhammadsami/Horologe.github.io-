@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horologe - Shop</title>
+  <link rel="stylesheet" href="watch.css">
+ 
+</head>
+<body>
+
+
+<!-- HEADER -->
+<header>
+  <div class="header-text">
+    <h1>Horologe</h1>
+    <p>Your One-Stop Shop for Watches</p>
+  </div>
+ <div class="header-image">
+    <img  src="images/Round silver chrono.jpg " alt="Watch with dragon design" class="responsive-img">
+
+</div>
+</header>
+
+<!-- NAV -->
+ <nav style="display: flex; justify-content: center; align-items: center; padding: 10px 2px;">
+ 
+    <div class="nav-left">
+      
+    <a href="about.html">About</a>
+     <a href="blog.html">Blog</a>
+   
+<a href="#" onclick="showContact(event)">Contact Us</a>
+    </div>
+</nav>
+<!-- Contact Popup -->
+<div id="contact-popup" class="popup"> <!-- ⭐ keep this -->
+  <div class="popup-content">
+    <!-- Close Button -->
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    
+    <h2>Contact Us</h2>
+    <p>We’d love to hear from you! 💬</p>
+    <p>Email: support@watchstore.com</p>
+    <p>Phone: +92 300 1234567</p>
+  </div>
+</div>
+<nav style="display: flex; justify-content: right; align-items: center; padding: 8px 2px;">
+<div class="nav-right">
+    <h1><a href="#cart" onclick="showCart()">🛒 Cart (<span id="cart-count">0</span>)
+    </a></h1>
+
+</div>
+</nav>
+<section class="about">
+  <style>
+    .about{border-top:1px solid #1f1f1f; background:#0e0e0e; color:#d6c461; padding:40px 24px}
+    .about .wrap{max-width:1100px; margin:0 auto}
+    .about h2{margin:0 0 6px; font-size:34px}
+    .about p{color:#bdbdbd; margin:0 0 18px}
+    .about .grid{display:grid; gap:18px; grid-template-columns:repeat(3,1fr)}
+    .about .card{background:#131212; border:1px solid #a0a0a0; border-radius:14px; padding:18px}
+    .about ul{margin:8px 0 0; padding-left:18px; color:#bdbdbd}
+    @media (max-width:900px){.about .grid{grid-template-columns:1fr}}
+  </style>
+
+  <div class="wrap">
+    <h2>About Horologe</h2>
+    <p>We curate authentic, stylish watches that combine precision with design. From daily wear to luxury pieces — our goal is to make choosing a watch effortless and confident.</p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Our Mission</h3>
+        <p>Deliver timeless style, verified quality, and guidance you can trust.</p>
+      </div>
+      <div class="card">
+        <h3>What We Offer</h3>
+        <ul>
+          <li>Luxury & budget-friendly selections</li>
+          <li>Transparent specs & care tips</li>
+          <li>Warranty & after-sales support</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Why Choose Us</h3>
+        <ul>
+          <li>100% authentic — no replicas</li>
+          <li>Easy returns & quick help</li>
+          <li>Clean, modern shopping experience</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+
+
+<!-- PRODUCTS -->
+<section> 
+  <div class="product-grid">
+
+    <div class="product-card">
+      <img src="images/orient.jpg" 
+           alt="Rolex Diamond Ice" 
+           onclick="openWatchPopup('Rolex Diamond Ice')">
+      <div class="popup" id="popup-rolex-ice">...</div>
+      <h3>Rolex Diamond Ice</h3>
+      <p>$30000</p>  
+      <button class="btn" onclick="addToCart('Rolex Diamond Ice', 30000)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/Round silver chrono.jpg" 
+           alt="Round Silver Chrono" 
+           onclick="openWatchPopup('Round Silver Chrono')">
+      <div class="popup" id="popup-round-silver">...</div>
+      <h3>Round Silver Chrono</h3>
+      <p>$3000</p>
+      <button class="btn" onclick="addToCart('Round Silver Chrono', 3000)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/blue.jpg" 
+           alt="Fossil Nate" 
+           onclick="openWatchPopup('Fossil Nate')">
+      <div class="popup" id="popup-fossil-nate">...</div>
+      <h3>Fossil Nate</h3>  
+      <p>$300</p>
+      <button class="btn" onclick="addToCart('Fossil Nate', 300)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/Dragon Cave.jpeg"
+           alt="Dragon Cave"
+           onclick="openWatchPopup('Dragon Cave')">
+      <div class="popup" id="popup-dragon-cave">...</div>
+      <h3>Dragon Cave</h3>  
+      <p>$300</p>
+      <button class="btn" onclick="addToCart('Dragon Cave', 300)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/rolex sky.jpg" 
+           alt="Rolex Sky" 
+           onclick="openWatchPopup('Rolex Sky')">
+      <div class="popup" id="popup-rolex-sky">...</div>
+      <h3>Rolex Sky</h3>  
+      <p>$300</p>
+      <button class="btn" onclick="addToCart('Rolex Sky', 300)">Add to Cart</button>
+    </div>
+
+  </div> <!-- ✅ yahan product-grid properly close hota hai -->
+</section>
+
+
+
+
+
+
+
+
+  <!-- Popup Modal -->
+  <div id="watch-popup" class="watch-modal">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closeWatchPopup()">&times;</span>
+      <h2 id="watch-title"></h2>
+      <img id="watch-image" src="" alt="Watch" style="width:100%; border-radius:8px;">
+      <p id="watch-description"></p>
+
+      <h3>Customer Reviews:</h3>
+      <ul id="watch-reviews-list"></ul>
+
+      <h3>Add Your Review:</h3>
+      <input type="text" id="reviewer-name" placeholder="Your Name">
+      <textarea id="review-text" placeholder="Write your review..."></textarea>
+      <button onclick="addReview()">Submit Review</button>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+<!-- CART -->
+<div class="cart-summary" id="cart" style="position: fixed; top: 50%; left: 50%;
+transform: translate(-50%, -50%); z-index: 999; display: none; border: 2px solid #000000; background:white; padding:20px;">
+  <button onclick="closeCart()" style="position: absolute; top: 10px; right: 10px; background: rgb(10, 10, 10);
+  color: white; border: none; border-radius: 50%; width: 25px; height: 25px; cursor: pointer;">×</button>
+  <h2>Order Summary</h2>
+  <div id="cart-items"></div>
+  <input type="text" id="name" placeholder="Your Name" required>
+  <input type="text" id="address" placeholder="Address" required>
+  <input type="tel" id="phone" placeholder="Phone Number" required>
+  <input type="email" id="email" placeholder="Email (optional)">
+  <button class="btn" onclick="submitOrder()">Confirm Order</button>
+</div>
+
+<div class="popup" id="popupMsg">✅ Order placed successfully!</div>
+
+
+
+
+<!-- AI SUPPORT -->
+<div id="support-logo">
+  <img src="images/support.png" alt="Customer Support">
+</div>
+
+<div id="chatbox">
+  <div id="chatbox-header">AI Watch Support</div>
+  <div id="chatbox-body"></div>
+  <div id="chatbox-input">
+    <input type="text" id="userInput" placeholder="Ask about our watches...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Horologe. All rights reserved.</p>
+</footer>
+<!-- Scripts -->
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
